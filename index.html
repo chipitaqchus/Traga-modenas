@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER JACKPOT 2077 | Premium Neon Casino</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <h1 class="glitch" data-text="CYBER JACKPOT">CYBER JACKPOT</h1>
+            <h2 class="neon-purple">2077</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="load-progress"></div>
+            </div>
+            <p class="loading-text">ESTABLECIENDO CONEXIÓN SEGURA...</p>
+        </div>
+    </div>
+
+    <div class="app-container hidden" id="main-app">
+        
+        <div class="background-grid"></div>
+        <div class="particles-container" id="particles"></div>
+        <div class="flash-overlay" id="flash-screen"></div>
+
+        <header class="main-header">
+            <div class="logo-area">
+                <span class="neon-flicker">CYBER</span>
+                <span class="neon-pink">JACKPOT</span>
+                <span class="badge">2077</span>
+            </div>
+            <div class="jackpot-ticker-container">
+                <div class="ticker-label">GLOBAL JACKPOT</div>
+                <div class="ticker-value" id="jackpot-counter">001,420,690</div>
+            </div>
+        </header>
+
+        <main class="game-layout">
+            
+            <section class="side-panel left-panel">
+                <div class="glass-card balance-card">
+                    <h3>CRÉDITOS DISPONIBLES</h3>
+                    <div class="crypto-balance">
+                        <span class="currency-icon">⌫</span>
+                        <span id="balance-display" class="balance-value">10,000</span>
+                    </div>
+                    <div class="daily-bonus-notice">
+                        <small>⚡ Carga diaria activa: 10,000 CR diarios</small>
+                    </div>
+                </div>
+
+                <div class="glass-card progression-card">
+                    <div class="level-info">
+                        <span>NIVEL <strong id="level-display">1</strong></span>
+                        <span id="xp-display" class="xp-text">0 / 100 XP</span>
+                    </div>
+                    <div class="xp-bar-container">
+                        <div class="xp-bar" id="xp-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="glass-card payouts-card">
+                    <h3>MATRIZ DE PAGOS</h3>
+                    <div class="payout-grid">
+                        <div class="payout-row"><span>🎰 3x Siete</span><span class="payout-x magenta">x25</span></div>
+                        <div class="payout-row"><span>💎 3x Diamante</span><span class="payout-x magenta">x10</span></div>
+                        <div class="payout-row"><span>👑 3x Corona</span><span class="payout-x purple">x5</span></div>
+                        <div class="payout-row"><span>⚡ 3x Rayo</span><span class="payout-x cyan">x3</span></div>
+                        <div class="payout-row"><span>🪙 3x Moneda</span><span class="payout-x yellow">x2</span></div>
+                        <div class="payout-row"><span>🔋 2x Iguales</span><span class="payout-x gray">x1.5</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="center-panel">
+                <div class="slot-machine-housing">
+                    <div class="led-border-top"></div>
+                    <div class="led-border-side left"></div>
+                    <div class="led-border-side right"></div>
+                    
+                    <div class="status-marquee">
+                        <div class="marquee-text" id="status-banner">INSERTE CRÉDITED & APUESTE</div>
+                    </div>
+
+                    <div class="reels-container" id="slots-window">
+                        <div class="reel-viewport"><div class="reel" id="reel-1"></div></div>
+                        <div class="reel-viewport"><div class="reel" id="reel-2"></div></div>
+                        <div class="reel-viewport"><div class="reel" id="reel-3"></div></div>
+                        <div class="laser-aim-line"></div>
+                    </div>
+
+                    <div class="machine-controls">
+                        <div class="control-group">
+                            <label>APUESTA</label>
+                            <div class="bet-selector">
+                                <button class="btn-bet-adjust" id="btn-bet-down">-</button>
+                                <span id="bet-display" class="bet-value">100</span>
+                                <button class="btn-bet-adjust" id="btn-bet-up">+</button>
+                            </div>
+                        </div>
+
+                        <button class="btn-spin" id="spin-button">
+                            <span class="btn-spin-text">SPIN</span>
+                            <span class="btn-spin-glow"></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="side-panel right-panel">
+                <div class="glass-card history-card">
+                    <h3>REGISTRO DE EXTRACCIONES</h3>
+                    <div class="history-log" id="history-list">
+                        <div class="empty-log">Ningún registro en esta sesión</div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <div class="overlay-win hidden" id="win-overlay">
+        <div class="win-content">
+            <h1 id="win-title" class="animate-win-text">BIG WIN</h1>
+            <div class="win-payout-display">
+                <span class="plus">+</span><span id="win-amount-display">0</span>
+            </div>
+            <p id="win-multiplier-display">MULTIPLICADOR X0</p>
+        </div>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
